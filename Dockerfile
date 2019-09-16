@@ -1,6 +1,6 @@
 From tomcat:8.0.51-jre8-alpine
 RUN rm -rf /usr/local/tomcat/webapps/*
-COPY ./target/SmithMessagingService-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
+COPY ./target/SmithMessagingService-*.war /usr/local/tomcat/webapps/ROOT.war
 RUN sed -i 's/port="8080"/port="8080"/' /usr/local/tomcat/conf/server.xml
 CMD ["catalina.sh","run"]
 
